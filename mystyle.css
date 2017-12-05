@@ -1,0 +1,42 @@
+
+	body {
+			background-color: aliceblue;
+			color:black;
+		
+	}	
+	
+	h1 {
+			font-size:42;
+			text-decoration: blink;
+			text-shadow: 2px 1px thistle;
+			text-align: center;
+	}
+	
+
+
+	
+	ul {
+		font-size:6;
+    	list-style-type: none;
+   		margin: 0;
+    	padding: 0;
+    	overflow: hidden;
+   		background-color:LightGray;
+	}
+
+	li {
+   		 float: right;
+	}
+
+	li a {
+   		display: block;
+    	color: black;
+    	text-align: center;
+    	padding: 14px 16px;
+    	text-decoration: none;
+    	text-shadow: 2px 1px thistle;
+
+
+	li a:hover {
+   		background-color:Thistle;
+	}
