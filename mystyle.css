@@ -23,16 +23,16 @@
 	
 	.button_1{
 		height:38px;
-		background: thistle;
-		border:none;
+		background: palevioletred;
+		border:purple;
 		padding-left:20px;
 		padding-right:20px;
-		color:black;
+		color:white;
 	}
 	
 	.dark{
 		padding:15px;
-		background:PALEVIOLETRED;
+		background:purple;
 		color:white;
 		margin-top:10px;
 		margin-bottom: 10px;
@@ -50,7 +50,7 @@
 	
 	.dark3{
 		padding:15px;
-		background:PALEVIOLETRED;
+		background:purple;
 		color:white;
 		margin-top:10px;
 		margin-bottom: 10px;
@@ -58,12 +58,13 @@
 	
 	/* Header **/
 	header{
-		background-color: lightgrey;
+		background-color: grey;
 		color: white;
-		text-shadow: 2px 1px thistle;
 		padding-top: 30px
 		min-height: 70px
 		border-bottom: black 3px solid;
+		outline-color: purple;
+		outline-style: solid;
 	}
 
 
@@ -100,7 +101,7 @@
 	
 	
 	header .highlight, header .current a{
-		color:thistle;
+		color:purple;
 		font-weight: bold;
 		text-shadow: 2px 1px white;
 	}
@@ -117,7 +118,9 @@
 		min-height: 400px;
 		background: url(../img/showcase.jpg) no-repeat 0 -400px;
 		text-align: center;
-		color:green;
+		color:purple;
+
+		
 	}
 	
 	
@@ -137,8 +140,8 @@
 	/* Newsletter */
 	#newsletter{
 		padding:15px;
-		color: black;
-		background:lightgrey;
+		color: white;
+		background:grey;
 	}
 	
 	
@@ -205,7 +208,7 @@
 	ul#services li{
 		list-style: none;
 		padding:20px;
-		border:palevioletred solid 1px;
+		border:purple solid 1px;
 		margin-bottom: 5px;
 		background:grey;
 		
@@ -215,7 +218,7 @@
 		padding:20px;
 		margin-top:20px;
 		color:black;
-		background-color: lightgrey;
+		background-color:grey;
 		text-align: center;
 	}
 	
