@@ -1,0 +1,93 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Processing Demo</title>
+<script type="text/javascript" src="./img/anything.js"></script>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+		<header>
+			<div class="container">
+				<div id="branding">
+					<h1><span class="highlight"> Game </span> </h1>
+				</div>
+				<nav>
+					<ul>
+						<li><a href=" profile.html"> Profile </a></li>
+						<li><a href=" index.html"> Wild Life </a></li>
+						<li><a href=" Second.html"> Wild Life </a></li>
+						<li><a href=" Third.html"> Predators and Prey </a></li>
+						<li class="current"><a href="anything.html"> Game </a></li>
+					</ul>
+				</nav>		
+			</div>
+		</header>
+
+<body>
+<script type="text/processing">
+
+///Processing code goes in between the script tags
+PImage background;
+PImage dog;
+
+int x = 0; int count = 0;int Dx = 100; int Dy = 0; int Vy = 0; // Gravity
+int gamestate = 0;
+
+void setup(){
+  size(1000, 500);
+  dog = loadImage("./img/squirrelface.png");
+  background = loadImage("./img/background3.png"); //load and saves image to variable
+}
+
+void draw(){
+  if (gamestate == 0){
+  // backgroung Control
+  image(background,0 + x, 0);
+  image(background, 1000 + x, 0);
+  if (x == - 988){
+    x = 0;
+  }
+  
+//Squirrel control
+  image(dog, Dx, Dy + Vy);
+  x--;
+  Vy++;
+  Dy = Dy + Vy;
+  if (Dy > 600){
+    gamestate = 2;
+  }
+  
+}
+
+  if (gamestate == 2){
+    textSize(50);fill(0);
+    text("DEAD:", 350, 294);
+    fill(78, 149, 170);
+    rect(500, 250, 190, 50);
+    fill(0); 
+    text("Restart", 510, 293);
+    
+    if (mouseX > 500 && mouseX < 690 && mouseY > 250 && mouseY < 300){ //Mouse inside box
+      textSize(50);fill(0);
+      fill(164, 138, 184);
+      rect(500, 250, 190, 50);
+      fill(0); 
+      text("Restart", 510, 293);
+      
+      if (mousePressed){ // Click to restart
+        gamestate = 0;
+        Dy = 200;
+      
+      }
+    }
+  }
+}
+
+  void mousePressed(){
+    Vy = - 17;
+}
+
+</script>
+<canvas id="sketch" style="border: 1px solid black;"></canvas>
+</body>
+</html>
